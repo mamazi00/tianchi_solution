@@ -19,7 +19,7 @@ def get_location(path,test_mode=False):
     return x,y,type
 
 def gen_picture(path,test_mode=False):
-    fig_path = 'E:/天池/fig/mixture/test'
+    fig_path = 'E:/天池/fig/point/test'
     if test_mode:
         x,y = get_location(path,test_mode)
         fig_name = path.split("\\")[-1].rstrip(".csv") + ".jpg"
@@ -32,7 +32,7 @@ def gen_picture(path,test_mode=False):
     y_delta = (np.max(y)-np.min(y))/20
     plt.ylim(np.min(y)-y_delta, np.max(y)+y_delta)
     plt.xlim(np.min(x)-x_delta, np.max(x)+x_delta)
-    plt.plot(x, y, 'k')
+    # plt.plot(x, y, 'k')
     plt.axis('off') # 关闭坐标
     # chinfo = matplotlib.font_manager.FontProperties(fname='C:/Windows/Fonts/msyh.ttc')
     # plt.title(type, fontsize=24, fontproperties=chinfo)
